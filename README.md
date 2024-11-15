@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Ashen Maneth!  
+# I'm Ashen Maneth!  
 
 ## About Me  
 I’m a **Software Engineering undergraduate** at the University of Westminster, studying through the Informatics Institute of Technology (IIT). Passionate about **technology, problem-solving, and innovation**, I’m on a journey to become a skilled software developer.  
@@ -38,4 +38,4 @@ I specialize in:
 - **LinkedIn:** [Ashen Maneth](https://www.linkedin.com/in/ashen-maneth-91a174267/)  
 - **GitHub:** [Ashen-Maneth](https://github.com/Ashen-Maneth)  
 
-Let’s connect and build something amazing together! 🚀  
+Let’s connect and build something amazing together!
