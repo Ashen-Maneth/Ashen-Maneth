@@ -216,6 +216,49 @@ header::before {
     color: var(--accent-color);
 }
 
+/* Header resume download button */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-color);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: var(--card-shadow);
+}
+
+.resume-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.resume-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resume-btn:hover:before {
+    animation: shimmerButton 1.5s infinite;
+}
+
 /* Navigation */
 nav {
     background-color: rgba(10, 10, 32, 0.8);
@@ -761,6 +804,66 @@ section h2::after {
     max-width: 100%;
 }
 
+/* Contact section resume download */
+.resume-download {
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.resume-download h3 {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+
+.resume-download p {
+    margin-bottom: 1.5rem;
+}
+
+.resume-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    color: var(--light-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-download-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition);
+}
+
+.resume-download-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.resume-download-btn:hover:before {
+    animation: shimmerButton 1.5s infinite;
+}
+
 /* Responsive adjustments for contact grid */
 @media screen and (max-width: 992px) {
     .contact-grid {
@@ -1008,6 +1111,16 @@ footer {
     
     .typing-text {
         font-size: 1.2rem;
+    }
+
+    .resume-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .resume-download-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 }
 
