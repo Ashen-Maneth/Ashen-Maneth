@@ -220,7 +220,7 @@ header::before {
 nav {
     background-color: rgba(10, 10, 32, 0.8);
     backdrop-filter: blur(10px);
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 100;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
