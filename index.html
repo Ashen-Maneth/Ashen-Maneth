@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashen Maneth's Portfolio</title>
+    <title>Ashen Maneth | Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Add meta tags for better SEO -->
+    <meta name="description" content="Ashen Maneth - Software Engineer specializing in web development, database management, and software design.">
+    <meta name="keywords" content="software engineer, web developer, Python, Java, JavaScript, Firebase, Flutter">
 </head>
 <body>
     <header>
@@ -12,40 +17,220 @@
             <img src="image/img.jpg" alt="Ashen Maneth" class="profile-img">
             <div class="header-text">
                 <h1>Ashen Maneth</h1>
-                <p>Software Engineering Student</p>
+                <p class="typing-text">Software Engineer</p>
+                <div class="social-links">
+                    <a href="https://github.com/Ashen-Maneth" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ashen-maneth-91a174267" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:manethpamuditha23b@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+94720734643" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                </div>
             </div>
         </div>
     </header>
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section id="about">
+
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <p>Hi, I’m Ashen Maneth. I’m a second-year Software Engineering student at the Informatics Institute of Technology, pursuing a degree from the University of Westminster. I’m passionate about software development and keen on learning and collaborating on exciting projects.</p>
+        <p>Motivated and detail-oriented Software Engineering undergraduate at the University of Westminster (Informatics Institute of Technology, Sri Lanka) with hands-on experience in web development, database management, and software design. Skilled in crafting efficient, user-friendly applications with a strong focus on innovation and functionality. A proactive team player with strong problem-solving abilities and a commitment to continuous learning and professional growth.</p>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Flight Management System</h3>
-            <p>This Java program simplifies plane seat reservations with features for booking, availability checks, cancellations, seating visualization, and ticket information. It includes error handling and automatic file generation for efficient management.</p>
-            <a href="https://github.com/Ashen-Maneth/Flight-Management-System" target="_blank">View Project</a>
+
+    <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-grid">
+                    <div class="skill-item"><span data-level="Advanced">Python</span><div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div></div>
+                    <div class="skill-item"><span data-level="Advanced">Java</span><div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div></div>
+                    <div class="skill-item"><span data-level="Intermediate">JavaScript</span><div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div></div>
+                    <div class="skill-item"><span data-level="Advanced">HTML & CSS</span><div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Technologies & Tools</h3>
+                <div class="skill-grid">
+                    <div class="skill-item"><span data-level="Intermediate">Node.js</span><div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div></div>
+                    <div class="skill-item"><span data-level="Intermediate">Firebase</span><div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div></div>
+                    <div class="skill-item"><span data-level="Intermediate">Flutter</span><div class="skill-bar"><div class="skill-level" style="width: 65%"></div></div></div>
+                    <div class="skill-item"><span data-level="Advanced">MySQL</span><div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div></div>
+                    <div class="skill-item"><span data-level="Intermediate">MongoDB</span><div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div></div>
+                    <div class="skill-item"><span data-level="Advanced">Git & GitHub</span><div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div></div>
+                    <div class="skill-item"><span data-level="Intermediate">REST APIs</span><div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <div class="skill-grid">
+                    <div class="skill-item"><span data-level="Advanced">Problem-Solving</span><div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div></div>
+                    <div class="skill-item"><span data-level="Advanced">Team Collaboration</span><div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div></div>
+                    <div class="skill-item"><span data-level="Intermediate">UI/UX Design</span><div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div></div>
+                    <div class="skill-item"><span data-level="Advanced">Creative Thinking</span><div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div></div>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me:</p>
-        <ul>
-            <li>Email: manethpamuditha23b@gmail.com</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/ashen-maneth-91a174267" target="_blank">Ashen Maneth</a></li>
-            <li>GitHub: <a href="https://github.com/Ashen-Maneth" target="_blank">@Ashen-Maneth</a></li>
-        </ul>
+
+    <section id="experience" class="fade-in">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>UCraft.lk - Custom-Made Products Platform</h3>
+                    <span class="timeline-date">Sept 2024 - Present</span>
+                    <p>Developed a marketplace platform bridging consumers and local artisans, enabling custom product requests, price bidding, and secure transactions.</p>
+                    <ul>
+                        <li>Developed backend services using Node.js and Firebase for real-time data storage</li>
+                        <li>Built a Flask (Python) AI-based search & recommendation system</li>
+                        <li>Created the Flutter frontend, ensuring a seamless user experience</li>
+                        <li>Designed the UI/UX with Figma and contributed to the promotional web app</li>
+                    </ul>
+                    <a href="https://ucraft.lk/" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Dynamic Shopping Website</h3>
+                    <span class="timeline-date">Jan 2025</span>
+                    <p>Developed a functional e-commerce platform that allows users to browse products and add them to carts.</p>
+                    <ul>
+                        <li>Used PHP, HTML, CSS, JavaScript, and MySQL</li>
+                        <li>Implemented secure user authentication, product management, and an interactive shopping cart</li>
+                        <li>Optimized database queries for faster loading and efficient inventory handling</li>
+                    </ul>
+                    <a href="https://github.com/Ashen-Maneth/HomeTech-website" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Real-Time Event Ticketing System</h3>
+                <span class="project-date">Nov 2024 - Dec 2024</span>
+                <p>Built a real-time ticket booking system that enables users to register for events, search for tickets, and complete bookings with automated seat management.</p>
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Java</span>
+                    <span>MySQL</span>
+                </div>
+                <a href="https://github.com/Ashen-Maneth/Ticketing-Management-System" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+            </div>
+
+            <div class="project-card">
+                <h3>Life on Land (UN SDG 15) Web Project</h3>
+                <span class="project-date">Sept 2024 - Nov 2024</span>
+                <p>Created a web-based awareness platform to educate users on land conservation as part of the United Nations Sustainable Development Goal (SDG) 15.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/Ashen-Maneth/Life-on-Land-Web-Project" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+            </div>
+
+           
+
+            <div class="project-card">
+                <h3>Flight Management System</h3>
+                <span class="project-date">2023</span>
+                <p>This Java program simplifies plane seat reservations with features for booking, availability checks, cancellations, seating visualization, and ticket information.</p>
+                <div class="project-tech">
+                    <span>Java</span>
+                </div>
+                <a href="https://github.com/Ashen-Maneth/Flight-Management-System" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="fade-in">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>University of Westminster (Informatics Institute of Technology, Sri Lanka)</h3>
+            <p class="education-degree">Bachelor's Degree in Computer Science</p>
+            <p class="education-date">2023 - 2027</p>
+        </div>
+        <div class="education-item">
+            <h3>Informatics Institute of Technology</h3>
+            <p class="education-degree">Foundation Certificate Course - Distinction Pass</p>
+            <p class="education-date">2022 - 2023</p>
+        </div>
+        <div class="education-item">
+            <h3>Bandaragama Central College</h3>
+            <p class="education-degree">G.C.E. Ordinary Level Examination - A7, C2</p>
+            <p class="education-date">2021</p>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:manethpamuditha23b@gmail.com">manethpamuditha23b@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/ashen-maneth-91a174267" target="_blank">Ashen Maneth</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/Ashen-Maneth" target="_blank">@Ashen-Maneth</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+9472 073 4643</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h3>Send me a message</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Ashen Maneth. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Ashen-Maneth" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ashen-maneth-91a174267" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2025 Ashen Maneth. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
