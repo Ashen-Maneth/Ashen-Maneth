@@ -153,5 +153,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    // Interactive skills radar chart
+    const ctx = document.getElementById('skillsRadar');
     
+    if (ctx) {
+        // Load Chart.js dynamically
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+        script.onload = function() {
+            const radarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'Frontend', 'Backend', 'Mobile',
+                        'Databases', 'UI/UX', 'Problem Solving'
+                    ],
+                    datasets: [{
+                        label: 'Skills',
+                        data: [85, 80, 65, 80, 75, 90],
+                        backgroundColor: 'rgba(108, 99, 255, 0.2)',
+                        borderColor: 'rgba(0, 247, 255, 0.8)',
+                        pointBackgroundColor: '#ffffff',
+                        pointBorderColor: '#00f7ff',
+                        pointHoverBackgroundColor: '#ffffff',
+                        pointHoverBorderColor: '#00f7ff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    aspectRatio: 1.2, // More compact ratio (default is usually 2)
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                            titleFont: {
+                                size: 12
+                            },
+                            bodyFont: {
+                                size: 11
+                            }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                display: false
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            angleLines: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            pointLabels: {
+                                color: '#e6e6e6',
+                                font: {
+                                    family: "'Poppins', sans-serif",
+                                    size: 12 // Reduced from 14
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        };
+        document.body.appendChild(script);
+    }
+
+
 });

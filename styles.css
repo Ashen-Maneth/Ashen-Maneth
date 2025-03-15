@@ -1506,3 +1506,31 @@ footer p {
     100% { transform: rotate(360deg); }
 }
 
+/* Add this CSS to your styles.css file */
+.skills-radar-container {
+    width: 450px;  /* Reduced from default size */
+    height: 350px; /* Reduced from default size */
+    margin: 0 auto 3rem auto;
+    position: relative;
+}
+
+#skillsRadar {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Responsive adjustments for the chart */
+@media screen and (max-width: 768px) {
+    .skills-radar-container {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-radar-container {
+        width: 280px;
+        height: 280px;
+    }
+}
+
