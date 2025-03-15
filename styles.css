@@ -94,22 +94,47 @@ header::before {
     100% { background-position: 1000px 1000px; }
 }
 
+/* Header container update for two-column layout */
 .header-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     z-index: 1;
     position: relative;
-    padding: 0 20px;
+    padding: 2rem 2rem;
+    gap: 2rem;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Left side text content */
+.header-text {
+    text-align: left;
+    flex: 1;
+    order: 1;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Right side profile image */
+.header-image {
+    order: 2;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-image .profile-img {
+    animation: float 4s ease-in-out infinite;
 }
 
 /* Update the profile image styles to be larger and maintain proportions better */
 .profile-img {
     border-radius: 50%;
-    width: 250px;  /* Increased from 200px */
-    height: 250px; /* Increased from 200px */
+    width: 320px;  /* Larger image */
+    height: 320px; /* Larger image */
     object-fit: cover;
     object-position: center top; /* This helps show more of your head/face */
     border: 3px solid rgba(150, 150, 150, 0.5);
@@ -153,10 +178,6 @@ header::before {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
 }
 
-.header-text {
-    text-align: center;
-}
-
 .header-text h1 {
     font-size: 3.5rem;
     font-weight: 800;
@@ -191,11 +212,12 @@ header::before {
     50% { opacity: 0; }
 }
 
+/* Make sure the social links align left */
 .social-links {
     margin-top: 1.5rem;
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .social-links a {
@@ -1103,6 +1125,56 @@ footer p {
 }
 
 /* Responsive Design */
+@media screen and (max-width: 992px) {
+    .header-container {
+        flex-direction: column-reverse;
+        padding: 2rem 1rem;
+    }
+
+    .header-text {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav ul li a {
+        padding: 0.8rem 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    .profile-img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header-text h1 {
         font-size: 2.5rem;
@@ -1135,6 +1207,25 @@ footer p {
 }
 
 @media screen and (max-width: 576px) {
+    .header-container {
+        flex-direction: column-reverse;
+        padding: 2rem 1rem;
+    }
+
+    .header-text {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 240px;
+        height: 240px;
+    }
+
     section {
         padding: 3rem 1.5rem;
     }
@@ -1198,5 +1289,18 @@ footer p {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: Add some floating animation to the image
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+} */
+
+/* Optional: Enhance the left side text with a subtle entry animation */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
