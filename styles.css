@@ -220,6 +220,7 @@ header::before {
     justify-content: flex-start;
 }
 
+/* Remove any underlines from social media icons */
 .social-links a {
     color: var(--light-color);
     font-size: 1.5rem;
@@ -233,6 +234,12 @@ header::before {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.social-links a::after {
+    display: none !important;
 }
 
 .social-links a:hover {
@@ -241,6 +248,10 @@ header::before {
     background: rgba(50, 50, 50, 0.2);
     border-color: var(--accent-color);
     color: var(--accent-color);
+}
+
+.social-links a:hover::after {
+    display: none !important;
 }
 
 /* Header resume download button */
