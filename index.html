@@ -145,7 +145,6 @@
                 </div>
                 <a href="https://github.com/Ashen-Maneth/Life-on-Land-Web-Project" target="_blank" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
             </div>
-
            
 
             <div class="project-card">
@@ -222,8 +221,24 @@
                 <div class="form-group">
                     <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>Send Message</span>
+                    <span class="loading-spinner" style="display: none;">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </span>
+                </button>
             </form>
+            <div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
+                <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 3rem;"></i>
+                <p style="margin-top: 10px;">Thank you! Your message has been sent successfully.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--accent-color);">
+            <p>If you encounter any issues with the contact form, please email me directly at 
+                <a href="mailto:manethpamuditha23b@gmail.com" style="color: var(--accent-color); text-decoration: underline;">
+                    manethpamuditha23b@gmail.com
+                </a>
+            </p>
         </div>
     </section>
 
@@ -242,6 +257,22 @@
         </div>
         <p>&copy; 2025 Ashen Maneth. All rights reserved.</p>
     </footer>
+    <script type="text/javascript">
+      // Check if EmailJS is already loaded
+      window.onload = function() {
+        // Create a script element manually
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+        script.onload = function() {
+          emailjs.init("fCoez-7fp3I7f6DTB");
+          console.log("EmailJS loaded successfully");
+        };
+        script.onerror = function() {
+          console.error("Failed to load EmailJS library");
+        };
+        document.body.appendChild(script);
+      };
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -68,14 +68,73 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Add form submission handling
+    // Email contact form functionality
     const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('successMessage');
+    const loadingSpinner = document.querySelector('.loading-spinner');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Here you would normally add AJAX to submit the form
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            contactForm.reset();
+            
+            // Show loading spinner
+            submitBtn.querySelector('span:first-child').style.display = 'none';
+            loadingSpinner.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Check if emailjs is available
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS is not loaded');
+                alert('Sorry, the email service is currently unavailable. Please try again later or contact me directly at manethpamuditha23b@gmail.com');
+                
+                // Restore button state
+                submitBtn.querySelector('span:first-child').style.display = 'inline-block';
+                loadingSpinner.style.display = 'none';
+                submitBtn.disabled = false;
+                return;
+            }
+            
+            // Prepare template parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_name: "Ashen Maneth",
+                reply_to: email
+            };
+            
+            // Send email using EmailJS with better error handling
+            emailjs.send('service_pmo8i84', 'template_n0riclk', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Hide form, show success message
+                    contactForm.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    // Reset form and button state
+                    contactForm.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.querySelector('span:first-child').style.display = 'inline-block';
+                    loadingSpinner.style.display = 'none';
+                })
+                .catch(function(error) {
+                    console.error('FAILED...', error);
+                    
+                    // Show detailed error message for debugging
+                    alert('Error sending message: ' + (error.text || 'Unknown error'));
+                    
+                    // Restore button state
+                    submitBtn.querySelector('span:first-child').style.display = 'inline-block';
+                    loadingSpinner.style.display = 'none';
+                    submitBtn.disabled = false;
+                });
         });
     }
 });
