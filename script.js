@@ -1,3 +1,15 @@
+// Add this to the top of your script.js
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+        loader.classList.add('hidden');
+        // Remove the loader from DOM after transition completes
+        setTimeout(() => {
+            loader.remove();
+        }, 500);
+    }, 500);
+});
+
 // Add any JavaScript if needed for interactivity
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Ashen Maneth\'s portfolio loaded');

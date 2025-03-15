@@ -16,10 +16,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Add meta tags for better SEO -->
-    <meta name="description" content="Ashen Maneth - Software Engineer specializing in web development, database management, and software design.">
-    <meta name="keywords" content="software engineer, web developer, Python, Java, JavaScript, Firebase, Flutter">
+    <meta name="description" content="Ashen Maneth - Software Engineer specializing in web development, backend systems, and database management. University of Westminster student based in Sri Lanka.">
+    <meta name="keywords" content="software engineer, web developer, backend developer, Sri Lanka, IIT, University of Westminster, Java, Python, JavaScript">
+    <meta name="author" content="Ashen Maneth">
+    <meta property="og:title" content="Ashen Maneth | Software Engineer">
+    <meta property="og:description" content="Portfolio website showcasing projects, skills and experience in software development.">
+    <meta property="og:image" content="https://ashenmaneth.xyz//image/img.jpg">
+    <meta property="og:url" content="https://ashenmaneth.xyz/">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+    <!-- Add this as the first element inside your body tag -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
     <header>
         <div class="header-container">
             <!-- Left side: Text content -->
@@ -253,10 +267,10 @@
                     <div class="form-group">
                         <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn" id="submitBtn">
+                    <button aria-label="Send Message" type="submit" class="submit-btn" id="submitBtn">
                         <span>Send Message</span>
                         <span class="loading-spinner" style="display: none;">
-                            <i class="fas fa-circle-notch fa-spin"></i>
+                            <i class="fas fa-circle-notch fa-spin" aria-hidden="true"></i>
                         </span>
                     </button>
                 </form>
