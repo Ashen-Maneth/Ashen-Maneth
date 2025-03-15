@@ -1304,3 +1304,160 @@ footer p {
     to { opacity: 1; transform: translateX(0); }
 }
 
+/* Updated Contact Section Styling */
+#contact {
+    padding-bottom: 3rem;
+}
+
+/* Contact Container to organize the sections */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+/* Left side with contact info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-intro {
+    margin-bottom: 1.5rem;
+}
+
+.contact-intro h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.contact-intro p {
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+/* Improved contact grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.contact-item {
+    background: rgba(40, 40, 40, 0.3);
+    border: 1px solid rgba(80, 80, 80, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    background: rgba(50, 50, 50, 0.5);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.contact-item:hover i {
+    transform: scale(1.2);
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+/* Resume download within the contact info section */
+.resume-download {
+    margin: 1rem 0 0 0;
+    padding: 1.5rem;
+    background: rgba(40, 40, 40, 0.3);
+    border: 1px solid rgba(80, 80, 80, 0.3);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.resume-download h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    color: var(--accent-color);
+}
+
+/* Right side with contact form */
+.contact-form {
+    padding: 2rem;
+    background: rgba(40, 40, 40, 0.3);
+    border: 1px solid rgba(80, 80, 80, 0.3);
+    border-radius: 10px;
+    height: 100%;
+}
+
+.contact-form h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Success message styling */
+#successMessage {
+    background: rgba(20, 60, 30, 0.3);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#successMessage i {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #4CAF50;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

@@ -189,68 +189,83 @@
     </section>
 
     <section id="contact" class="fade-in">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <p><a href="mailto:manethpamuditha23b@gmail.com">manethpamuditha23b@gmail.com</a></p>
+    <h2>Contact</h2>
+    
+    <div class="contact-container">
+        <!-- Left side: Contact info -->
+        <div class="contact-info">
+            <div class="contact-intro">
+                <h3>Get in Touch</h3>
+                <p>Let's connect to discuss potential collaborations or opportunities. I'm always open to new projects and ideas.</p>
             </div>
-            <div class="contact-item">
-                <i class="fab fa-linkedin"></i>
-                <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/ashen-maneth-91a174267" target="_blank">Ashen Maneth</a></p>
-            </div>
-            <div class="contact-item">
-                <i class="fab fa-github"></i>
-                <h3>GitHub</h3>
-                <p><a href="https://github.com/Ashen-Maneth" target="_blank">@Ashen-Maneth</a></p>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <p>+9472 073 4643</p>
-            </div>
-        </div>
-        <div class="resume-download">
-            <h3>My Resume</h3>
-            <p>Download my complete resume for detailed information about my professional experience and skills.</p>
-            <a href="cv/Resume.pdf" download class="resume-download-btn">
-                <i class="fas fa-file-download"></i> Download Resume
-            </a>
-        </div>
-        <div class="contact-form">
-            <h3>Send me a message</h3>
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:manethpamuditha23b@gmail.com">manethpamuditha23b@gmail.com</a></p>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+9472 073 4643</p>
                 </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/ashen-maneth-91a174267" target="_blank">Ashen Maneth</a></p>
                 </div>
-                <button type="submit" class="submit-btn" id="submitBtn">
-                    <span>Send Message</span>
-                    <span class="loading-spinner" style="display: none;">
-                        <i class="fas fa-circle-notch fa-spin"></i>
-                    </span>
-                </button>
-            </form>
-            <div id="successMessage" style="display: none; text-align: center; margin-top: 20px;">
-                <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 3rem;"></i>
-                <p style="margin-top: 10px;">Thank you! Your message has been sent successfully.</p>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/Ashen-Maneth" target="_blank">@Ashen-Maneth</a></p>
+                </div>
             </div>
-        </div>
-        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--accent-color);">
-            <p>If you encounter any issues with the contact form, please email me directly at 
-                <a href="mailto:manethpamuditha23b@gmail.com" style="color: var(--accent-color); text-decoration: underline;">
-                    manethpamuditha23b@gmail.com
+            
+            <div class="resume-download">
+                <h3>My Resume</h3>
+                <p>Download my complete resume for detailed information about my skills and experience.</p>
+                <a href="cv/Resume.pdf" download class="resume-download-btn">
+                    <i class="fas fa-file-download"></i> Download Resume
                 </a>
-            </p>
+            </div>
         </div>
-    </section>
+        
+        <!-- Right side: Contact form -->
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span>Send Message</span>
+                        <span class="loading-spinner" style="display: none;">
+                            <i class="fas fa-circle-notch fa-spin"></i>
+                        </span>
+                    </button>
+                </form>
+                <div style="font-size: 0.85rem; margin-top: 1rem; color: var(--accent-color); text-align: center;">
+                    <p>If you encounter any issues with the form, please email me directly.</p>
+                </div>
+            </div>
+            
+            <!-- Success message (hidden initially) -->
+            <div id="successMessage" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <p>Thank you for your message!</p>
+                <p>I'll get back to you soon.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <footer>
         <div class="footer-content">
